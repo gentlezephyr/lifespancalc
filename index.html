@@ -1,18 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
 </head>
+
 <body>
+    <main>
+        <div class="firstContainer">
+            <p id="asksNumber">Calcular seu tempo de vida pode ser uma maneira interessante de refletir sobre o tempo
+                que passou. Digite seu ano de nascimento!</p>
+        </div>
+        <div class="secondContainer">
+            <input id="getYear" type="text" maxlength="4">
+            <div onclick="submitYear()" class="iconCircle">
+                <img src="./assets/img/checkIcon.svg" alt="">
+            </div>
 
-<input id="getYear" type="text">
-<button onclick="submitYear()">Click</button>
+            <p id="years"></p>
+            <p id="months"></p>
+            <p id="days"></p>
+        </div>
+    </main>
 
-<p id="years"></p>
-<p id="months"></p>
-<p id="days"></p>
-
-<script src="./assets/main.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
+
 </html>

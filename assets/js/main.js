@@ -13,7 +13,13 @@ function calculateDaysBetweenYears(startYear, endYear) {
 }
 
 function calcYear() {
-    let getYear = (parseInt(document.querySelector('#getYear').value));
+    let getYear = (parseInt(document.querySelector('#getYear').value.trim()));
+    let asksNumber = document.querySelector('#asksNumber');
+    if (isNaN(getYear)) {
+        asksNumber.innerHTML = "Digite seu ano de nascimento!"
+        return null;
+    }
+
     let endYear = 2024;
     let startYear = getYear;
     let totalDays = calculateDaysBetweenYears(startYear, endYear);
@@ -31,7 +37,7 @@ function submitYear() {
 
     let {totalDays, totalMonths, totalYears} = calcYear();
 
-    years.innerHTML = totalYears;
-    months.innerHTML = totalMonths;
-    days.innerHTML = totalDays;
+    years.innerHTML = `${totalYears} anos`;
+    months.innerHTML = `${totalMonths} meses`;
+    days.innerHTML = `${totalDays} dias`;
 }
